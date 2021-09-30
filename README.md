@@ -2,5 +2,4 @@
 
 Library created in HTML, CSS, and JS
 
-<br>
-(Live Demo)[https://connorjcantrell.github.io/library/]
+[Live Demo](https://connorjcantrell.github.io/library/)
