@@ -1,40 +1,59 @@
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: none;
+  margin: 0 auto;
 }
 
 body {
   background: #f5f2f0;
 }
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 100px;
-  padding-right: 100px;
-}
-
 .logo {
   display: flex;
   flex-direction: row;
-  justify-content: left;
-  align-items: flex-start;
   background: none;
+  margin-left: 0;
+}
+
+.logo > #logo-txt {
+  background: none;
+  color: #4f6dbe;
+  font-size: 200%;
+  margin-top: 35px;
+  margin-left: 10px;
 }
 
 .logo #logo-icon {
-  margin-top: 15%;
   font-size: 500%;
   background: none;
 }
 
-.logo > #logo-txt {
-  margin-top: 28%;
-  margin-left: 10px;
-  background: none;
-  color: #4f6dbe;
-  font-size: 200%;
+@media only screen and (min-width: 600px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    width: 80%;
+  }
+
+  .add {
+    margin: 0;
+  }
+
+  .logo {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
 }
 
 .add {
@@ -48,7 +67,7 @@ nav {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 250ms;
-  margin-bottom: 5%;
+  margin-right: 0;
 }
 
 .add:hover {
@@ -73,18 +92,16 @@ nav {
   background-color: rgba(246, 87, 90, 0.8);
 }
 .books {
-  margin: 0 10% auto;
-  margin-top: 25px;
   max-width: 1000px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
   grid-auto-rows: auto;
   gap: 30px;
+  width: 80%;
 }
 
 .book {
   width: 100%;
-  height: 600px;
   border: #4f6dbe;
   border-radius: 1px;
 }
@@ -109,7 +126,6 @@ footer {
   width: 100%;
   height: 40px;
   padding-top: 10px;
-  position: absolute;
   bottom: 0;
   left: 0;
   text-align: center;
