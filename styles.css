@@ -1,13 +1,29 @@
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: none;
-  margin: 0 auto;
+}
+
+#overlay {
 }
 
 body {
   background: #f5f2f0;
   min-height: 100vh;
 }
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+nav {
+  margin: 0 auto;
+}
+
 .logo {
   display: flex;
   flex-direction: row;
@@ -26,6 +42,7 @@ body {
 }
 
 .logo #logo-icon {
+  margin-top: 0;
   font-size: 500%;
   background: none;
 }
@@ -72,6 +89,88 @@ body {
   background-color: rgba(132, 195, 110, 0.8);
 }
 
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #4f6dbe;
+  border-radius: 10px;
+  z-index: 10;
+  background: #f5f2f0;
+  width: 500px;
+  max-width: 80%;
+}
+
+.modal-header {
+  margin: 0;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #4f6dbe;
+}
+
+.modal-header .close-btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.modal-header .form-title {
+  font-size: 1.25em;
+}
+
+.modal-fields {
+  padding: 10px 15px;
+}
+
+.modal label {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+}
+.modal input {
+  padding: 10px 15px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.modal textarea {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  resize: vertical;
+}
+
+.modal .submit-btn {
+  font-family: Geneva, Verdana, sans-serif;
+  background-color: rgba(79, 109, 190, 1);
+  color: white;
+  padding: 0.7rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 250ms;
+  margin-right: 0;
+}
+
+.modal .submit-btn:hover {
+  background-color: rgba(79, 109, 190, 0.75);
+}
+
 .remove {
   font-family: Geneva, Verdana, sans-serif;
   background-color: rgba(246, 87, 90, 1);
@@ -79,7 +178,7 @@ body {
   padding: 0.7rem 1rem;
   border: 1px solid rgba(255, 255, 255, 0.75);
   border-radius: 50px;
-  font-size: 1.1r;
+  font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 250ms;
@@ -90,6 +189,7 @@ body {
   background-color: rgba(246, 87, 90, 0.8);
 }
 .books {
+  margin: 0 auto;
   max-width: 1000px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
