@@ -3,21 +3,25 @@
   background: none;
 }
 
-#overlay {
-}
-
 body {
   background: #f5f2f0;
   min-height: 100vh;
 }
-
 #overlay {
   position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
 }
 
 nav {
@@ -93,7 +97,7 @@ nav {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0);
   border: 1px solid #4f6dbe;
   border-radius: 10px;
   z-index: 10;
@@ -168,7 +172,7 @@ nav {
 }
 
 .modal .submit-btn:hover {
-  background-color: rgba(79, 109, 190, 0.75);
+  background-color: rgb(79, 109, 190);
 }
 
 .remove {
@@ -186,7 +190,7 @@ nav {
 }
 
 .remove:hover {
-  background-color: rgba(246, 87, 90, 0.8);
+  background-color: rgba(246, 87, 90, 0.75);
 }
 .books {
   margin: 0 auto;
