@@ -4,7 +4,7 @@
 }
 
 body {
-  background: #f5f2f0;
+  background: #ffffff;
   min-height: 100vh;
 }
 #overlay {
@@ -132,7 +132,7 @@ nav {
   font-size: 1.25em;
 }
 
-.modal-fields {
+.modal form {
   padding: 10px 15px;
 }
 
