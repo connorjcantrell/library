@@ -65,7 +65,7 @@ submitBtn.addEventListener('click', () => {
     const author = authorInput.value
     const description = descriptionInput.value
     const pages = pagesInput.value
-    const isRead = readInput.value
+    const isRead = readInput.checked
     const book = new Book(title, author, description, pages, isRead)
     book.store()
     UI.displayBooks()
