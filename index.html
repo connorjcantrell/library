@@ -13,13 +13,11 @@
             <div class="form-title">Add a new book</div>
             <button class="close-btn">&times;</button>
         </div>
-        <form>
+        <form onsubmit="return false">
             <label for="title">Title</label>
             <input type="text" name="title" id="title" required>
             <label for="author">Author</label>
             <input type="text" name="author" id="author" required>
-            <label for="description">Description</label>
-            <textarea name="description" id="description" cols="50" rows="10"></textarea>
             <label for="pages">Pages</label>
             <input type="number" name="pages" id="pages" required>
             <label for="read">Read <input type="checkbox" name="read" id="read"></label>
@@ -40,8 +38,6 @@
         <!-- <div class="book">
             <div class="title">The Hero with a Thousand Faces</div>
             <div class="author">by <span class="author-output">Joseph Campbell</span></div>
-            <div class="info"><b>Description: </b><br><span class="description-output">Since its release in 1949, The Hero with a Thousand Faces has influenced millions of readers by combining the insights of modern psychology with Joseph Campbell’s revolutionary understanding of comparative mythology. In these pages, Campbell outlines the Hero’s Journey, a universal motif of adventure and transformation that runs through virtually all of the world’s mythic traditions. He also explores the Cosmogonic Cycle, the mythic pattern of world creation and destruction.
-            </span></div>
             <div class="info"><b>Pages: </b><span class="pages-output">432</span></div>
             <div class="info"><b>Read: </b> <span class="read-output">Yes</span></div>
             <button class="remove">Remove</button>
