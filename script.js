@@ -17,7 +17,7 @@ class Storage {
 
     static remove(id) {
         let storedBooks = JSON.parse(localStorage.getItem('books')) || []
-        let filteredBooks = storedBooks.filter(book => book.id === id)
+        let filteredBooks = storedBooks.filter(book => `book-${book.id}` !== id)
         localStorage.setItem('books', JSON.stringify(filteredBooks))
     }
 
