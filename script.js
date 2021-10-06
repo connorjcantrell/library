@@ -1,4 +1,4 @@
-class Book {
+ class Book {
     constructor(id, title, author, pages, read) {
         this.id = id
         this.title = title
@@ -37,6 +37,16 @@ class Storage {
         }
         return id
     }
+
+    static changeReadStatus(id) {
+        let storedBooks = JSON.parse(localStorage.getItem('books')) || []
+        storedBooks.forEach(book => {
+            if(`read-${book.id}`=== id) {
+                book.read = !book.read
+            }
+        })
+        localStorage.setItem('books', JSON.stringify(storedBooks))
+    }
 }
 
 const modal = document.querySelector('.modal')
@@ -59,6 +69,7 @@ class UI {
                 <div class="info"><b>Pages: </b><span class="pages-output">${book.pages}</span></div>
                 <div class="info"><b>Read: </b> <span class="read-output">${book.read}</span></div>
                 <button id="book-${book.id}" class="remove-btn">Remove</button>
+                <button id="read-${book.id}" class="read-btn">Read</button>
             `
             books.appendChild(bookDiv)
         })
@@ -125,6 +136,10 @@ const bodyEl = document.querySelector('body')
 bodyEl.addEventListener('click', e => {
     if (e.target.classList.contains('remove-btn')) {
         Storage.remove(e.target.id)
+        UI.displayBooks()
+    }
+    if (e.target.classList.contains('read-btn')) {
+        Storage.changeReadStatus(e.target.id)
         UI.displayBooks()
     }
 })
