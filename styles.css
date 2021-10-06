@@ -74,23 +74,41 @@ nav {
     margin: 0;
   }
 }
-
-.add-btn {
+.btn {
   font-family: Geneva, Verdana, sans-serif;
-  background-color: rgba(132, 195, 110, 1);
   color: white;
-  padding: 1rem 1rem;
+  padding: 0.7rem 1rem;
   border: 1px solid rgba(255, 255, 255, 0.75);
   border-radius: 50px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 250ms;
-  margin-right: 0;
+  margin-top: 20px;
+}
+
+.remove-btn {
+  background-color: rgba(246, 87, 90, 1);
+}
+
+.remove-btn:hover {
+  background-color: rgba(246, 87, 90, 0.75);
+}
+
+.add-btn {
+  background-color: rgba(132, 195, 110, 1);
 }
 
 .add-btn:hover {
   background-color: rgba(132, 195, 110, 0.8);
+}
+
+.read-btn {
+  background-color: rgba(79, 109, 190, 1);
+}
+
+.read-btn:hover {
+  background-color: rgba(79, 109, 190, 0.8);
 }
 
 .modal {
@@ -179,23 +197,6 @@ nav {
   background-color: rgb(79, 109, 190);
 }
 
-.remove-btn {
-  font-family: Geneva, Verdana, sans-serif;
-  background-color: rgba(246, 87, 90, 1);
-  color: white;
-  padding: 0.7rem 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.75);
-  border-radius: 50px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 250ms;
-  margin-top: 20px;
-}
-
-.remove:hover {
-  background-color: rgba(246, 87, 90, 0.75);
-}
 .books {
   margin: 0 auto;
   max-width: 1000px;
